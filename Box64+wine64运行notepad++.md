@@ -1,10 +1,10 @@
 - **通过结合 Wine 运行某些 Windows x86_64 程序和游戏**
 
-Box64 可通过结合 Wine64 运行 Windows x86_64 程序。以运行 notepad++ 为例，安装配置 Wine64 并运行 Windows x86_64 程序的具体步骤如下：
+在 deepin (ARM64 & RISC-V64)、Debian (ARM64 & RISC-V64)、Ubuntu (ARM64) 等系统中，Box64 可通过结合 Wine64 运行 Windows x86_64 程序。以 deepin RISC-V64 系统运行 notepad++ 为例，使用 Box64 安装配置 Wine64 并运行 Windows x86_64 程序的具体步骤如下：
 
 1. **安装依赖项**：
    
-   在 ARM64 或 RISC-V64 Linux 系统上安装所需的依赖项：
+   输入以下指令安装所需的依赖项（不同架构的系统将会安装对应架构的软件包）：
    
    ```
    sudo apt update
@@ -19,6 +19,10 @@ Box64 可通过结合 Wine64 运行 Windows x86_64 程序。以运行 notepad++ 
    ```
 
 2. **手动下载安装 amd64 架构的 Wine64：**
+   
+   如果使用 apt 直接从仓库安装 wine64，我们得到的将会是 ARM64 或 RISC-V64 架构的软件，而 Box64 的主要功能是，在 ARM64 或 RISC-V64 架构的系统上，翻译运行 amd64 程序，故从仓库下载的 wine64 将无法配合 Box64 运行。
+   
+   所以，我们需要手动下载安装 amd64 架构的 wine64.
    
    从官方镜像源下载 Wine64 及其组件的 deb 包（以 9.0.0.0 stable 版本为例）：
    
@@ -45,7 +49,6 @@ Box64 可通过结合 Wine64 运行 Windows x86_64 程序。以运行 notepad++ 
    sudo ln -s ~/wine/bin/wineboot /usr/local/bin/wineboot
    sudo ln -s ~/wine/bin/winecfg /usr/local/bin/winecfg
    sudo ln -s ~/wine/bin/wineserver /usr/local/bin/wineserver
-   sudo ln -s ~/wine/lib64 /usr/lib64
    sudo chmod +x /usr/local/bin/wine64 /usr/local/bin/wineboot /usr/local/bin/winecfg /usr/local/bin/wineserver
    ```
 
