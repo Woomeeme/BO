@@ -68,6 +68,8 @@
    
    ![files](https://github.com/Woomeeme/Box64-Wine64/blob/main/images/files-notepad%2B%2B.png)
    
+   （注：图为使用 qemu-user 在 Ubuntu 系统上搭建的 deepin RISC-V64 的 chroot 环境，可将其视为 deepin RISC-V64 设备）
+   
    运行 notepad++.exe：
    
    ```
