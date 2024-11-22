@@ -66,7 +66,7 @@
    
    把 Windows 系统的应用直接拷贝到 ARM64 或 RISC-V64 Linux 系统上运行，以 notepad++ 为例：
    
-   ![](C:\Users\Liu\AppData\Roaming\marktext\images\2024-11-21-17-39-16-image.png)
+   ![files](https://github.com/Woomeeme/Box64-Wine64/blob/main/images/files-notepad%2B%2B.png)
    
    运行 notepad++.exe：
    
@@ -76,6 +76,6 @@
    
    运行效果：
    
-   ![](C:\Users\Liu\AppData\Roaming\marktext\images\2024-11-21-17-41-55-image.png)
+   ![running](https://github.com/Woomeeme/Box64-Wine64/blob/main/images/running-notepad%2B%2B.png)
    
    由于经过了系统环境和架构的双重转换，加上设备性能的限制，运行起来会有一些卡顿；此外，若要运行更加复杂的应用，比如基于 directX 的游戏，则还需要在 wine64 创建的 wineprefix 中安装对应的依赖环境，目前有待进一步测试。
